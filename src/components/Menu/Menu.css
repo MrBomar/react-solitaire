@@ -1,0 +1,17 @@
+.Menu {
+    position: absolute;
+    display: inline;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: 50px;
+    background-color: black;
+}
+
+@media screen and (min-aspect-ratio: 741/741) {
+    /* Landscape */
+    .Menu {
+        height: 100vh;
+        width: 50px;
+    }
+}
