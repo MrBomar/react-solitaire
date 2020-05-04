@@ -53,7 +53,7 @@ export default class MenuButton extends React.Component{
     render() {
 
         return(
-            <div className='MenuButton' onMouseOut={this.onMouseOut}>
+            <div className='MenuButton' onMouseOut={this.onMouseOut} onClick={this.props.action}>
                 {this.iconPicker()}
             </div>
         );

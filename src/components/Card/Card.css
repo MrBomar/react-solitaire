@@ -1,0 +1,124 @@
+.S, .C {
+    color: black;
+}
+
+.D, .H {
+    color: red;
+}
+
+.Card {
+    box-sizing: border-box;
+    height: calc(calc(calc(92vw - 50px) / 7) / .64285714285714285714285714285714);
+    width: calc(calc(92vw - 50px) / 7);
+}
+
+.CardFace {
+    position: fixed;
+    display: grid;
+    grid-template-rows: 20% 60% 20%;
+    grid-template-columns: calc(20.4397vw * .20) auto calc(20.4397vw * .20);
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 1px 2px black;
+    border-radius: 1vw;
+}
+
+.CardFace h2 {
+    display: block;
+    position: absolute;
+    height: calc(20.4397vw * .20);
+    line-height: calc(20.4397vw * .20);
+    width: calc(20.4397vw * .20);
+    text-align: center;
+    font-size: 4vw;
+}
+
+.CardTopLeft {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.CardTopRight {
+    grid-row: 1;
+    grid-column: 3;
+}
+
+.CardMiddle {
+    width: 100%;
+    height: calc(20.4397vw *.6);
+    line-height: calc(20.4397vw *.6);
+    vertical-align: middle;
+    grid-row: 2;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: center;
+    font-size: 8vw;
+}
+
+.CardBottomLeft {
+    grid-row: 3;
+    grid-column: 1;
+}
+
+.CardBottomRight {
+    grid-row: 3;
+    grid-column: 3;
+}
+
+.CardBack {
+    position: fixed;
+    background-color: teal;
+    border-width: 1vh;
+    border-style: ridge groove groove ridge;
+    border-radius: 1vw;
+    box-shadow: 1px 2px black;
+}
+
+.CardBack h1, h2 {
+    display: none;
+}
+
+.CardTop, .CardBottom {
+    width: 100%;
+    height: calc(20.4397vw * .25);
+}
+
+.Shade {
+    background-color: rgb(180,180,255);
+    opacity: 80;
+}
+
+@media screen and (min-aspect-ratio: 741/741) {
+    
+    .CardFace h2 {
+        height: calc(20.44414437vh * .20);
+        line-height: calc(20.44414437vh * .20);
+        width: calc(20.44414437vh * .20);
+        font-size: 4vh;
+    }
+    
+    .CardFace {
+        grid-template-columns: calc(20.4397vh * .20) auto calc(20.4397vh * .20);
+        border-radius: 1vh;
+    }
+    
+    .CardMiddle {
+        height: calc(20.4397vh *.6);
+        line-height: calc(20.4397vh *.6);
+        font-size: 8vh;
+    }
+
+    .CardBack {
+        border-width: 1vh;
+        border-radius: 1vh;
+    }
+    
+    .CardTop, .CardBottom {
+        height: calc(20.4397vh * .25);
+    }
+    
+    .CardBack, .CardFace, .MobileCardFace {
+        height: 20.44414437vh;
+        width: 13.14285714vh;
+    }
+}

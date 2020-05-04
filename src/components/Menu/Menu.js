@@ -5,17 +5,26 @@ import './Menu.css';
 export default class Menu extends React.Component {
     constructor() {
         super();
-        this.children = ["Button1","Button2","Button3","Button4"];
+        this.missingLink = this.missingLink.bind(this);
+        this.missingFunction = this.missingFunction.bind(this);
+    }
+
+    missingLink() {
+        alert('Missing Link');
+    }
+
+    missingFunction() {
+        alert('Missing Function');
     }
     
     render() {
         return(
             <div className='Menu'>
-                <MenuButton name='home' openButton={this.props.openButton} closeButton={this.props.closeButton} state={this.props.state}/>
-                <MenuButton name='undo' openButton={this.props.openButton} closeButton={this.props.closeButton} state={this.props.state}/>
-                <MenuButton name='replay' openButton={this.props.openButton} closeButton={this.props.closeButton} state={this.props.state}/>
-                <MenuButton name='random' openButton={this.props.openButton} closeButton={this.props.closeButton} state={this.props.state}/>
-                <MenuButton name='solvable' openButton={this.props.openButton} closeButton={this.props.closeButton} state={this.props.state}/>
+                <MenuButton name='home' action={this.missingLink} openButton={this.props.openButton} closeButton={this.props.closeButton} state={this.props.state}/>
+                <MenuButton name='undo' action={this.missingFunction} openButton={this.props.openButton} closeButton={this.props.closeButton} state={this.props.state}/>
+                <MenuButton name='replay' action={this.props.dealReplay} openButton={this.props.openButton} closeButton={this.props.closeButton} state={this.props.state}/>
+                <MenuButton name='random' action={this.props.dealRandom} openButton={this.props.openButton} closeButton={this.props.closeButton} state={this.props.state}/>
+                <MenuButton name='solvable' action={this.props.dealSolvable} openButton={this.props.openButton} closeButton={this.props.closeButton} state={this.props.state}/>
             </div>
         )
     }

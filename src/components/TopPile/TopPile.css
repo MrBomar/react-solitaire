@@ -1,0 +1,22 @@
+.TopPile {
+    height: calc(calc(calc(92vw - 50px) / 7) / .64285714285714285714285714285714);
+    width: calc(calc(92vw - 50px) / 7);
+    grid-row: 2;
+    background-color: rgba(255, 255, 255, .25);
+    z-index: 0;
+}
+
+#Stock {
+    grid-column: 2;
+}
+
+#Talon {
+    grid-column: 4;
+}
+
+@media screen and (min-aspect-ratio: 741 / 741){
+    .TopPile {
+        height: 20.44414437vh;
+        width: 13.14285714vh;
+    }
+}

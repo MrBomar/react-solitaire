@@ -1,0 +1,65 @@
+/* Portrait */
+
+.Foundation {
+    border: 1px inset;
+    border-radius: 1vw;
+    z-index: 0;
+    height: calc(calc(calc(92vw - 50px) / 7) / .64285714285714285714285714285714);
+    width: calc(calc(92vw - 50px) / 7);
+    grid-row: 2;
+    background-color: rgba(255, 255, 255, .25);
+}
+
+.Symbol {
+    font-size: 14vw;
+    text-align: center;
+    width: calc(calc(92vw - 50px) / 7);
+}
+
+.mobileSymbol {
+    padding-top: 5vw;
+    font-size: 8vw;
+    text-align: center;
+    width: 13.14vw;
+}
+
+#Spade {
+    grid-column: 8;
+    color: black;
+}
+
+#Heart {
+    grid-column: 10;
+    color: red;
+}
+
+#Club {
+    grid-column: 12;
+    color: black;
+}
+
+#Diamond {
+    grid-column: 14;
+    color: red;
+}
+
+@media screen and (min-aspect-ratio: 741 / 741) {
+    /* Landscape */
+
+    .Foundation {
+        height: 20.44414437vh;
+        width: 13.14285714vh;
+    }
+
+    .Symbol {
+        font-size: 15vh;
+        width: 13.14vh;
+    }
+    
+    .mobileSymbol {
+        padding-top: 5vh;
+        font-size: 8vh;
+        width: 13.14vh;
+        margin-top: 1vh;
+    }
+}

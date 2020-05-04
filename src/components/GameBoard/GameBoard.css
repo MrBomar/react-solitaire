@@ -7,6 +7,9 @@
     top: 50px;
     left: 0px;
     height: calc(100vh - 50px);
+    display: grid;
+    grid-template-columns: 1vw calc(92vw / 7) 1vw calc(92vw / 7) 1vw calc(92vw / 7) 1vw calc(92vw / 7) 1vw calc(92vw / 7) 1vw calc(92vw / 7) 1vw calc(92vw / 7) 1vw;
+    grid-template-rows: 1vw 20.44414437vw 1vw calc(calc(100vh - 50px) - 23.44414437vw) 1vw;
 }
 
 @media screen and (min-aspect-ratio: 741/741) {
@@ -16,5 +19,7 @@
         height: 100vh;
         left: 50px;
         top: 0px;
+        grid-template-columns: calc((100vw - 91vh - 50px) / 8) 13vh calc((100vw - 91vh - 50px) / 8) 13vh calc((100vw - 91vh - 50px) / 8) 13vh calc((100vw - 91vh - 50px) / 8) 13vh calc((100vw - 91vh - 50px) / 8) 13vh calc((100vw - 91vh - 50px) / 8) 13vh calc((100vw - 91vh - 50px) / 8) 13vh calc((100vw - 91vh - 50px) / 8);
+        grid-template-rows: 1vh 20.44414437vh 1vh calc(100vw - 23.44414437vh) 1vh;
     }
 }
